@@ -2,6 +2,8 @@ import { db } from 'src/lib/db'
 
 export const todos = () => db.todo.findMany()
 
+export const todosCount = () => db.todo.count()
+
 export const createTodo = ({ body }) => db.todo.create({ data: { body } })
 
 export const updateTodoStatus = ({ id, status }) =>
